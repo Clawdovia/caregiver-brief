@@ -1,0 +1,211 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import SubscribeForm from '../components/SubscribeForm.astro';
+---
+
+<Layout
+  title="Doctor Visit Script Library — The Caregiver Brief"
+  description="50 free scripts for talking to any doctor, at any stage of dementia and Alzheimer's caregiving. Know exactly what to say. Get heard every time."
+>
+  <Nav />
+
+  <!-- Hero -->
+  <section class="min-h-screen flex items-center justify-center px-6 pt-24 pb-16" style="background: linear-gradient(160deg, #0a1628 0%, #0d1f3c 60%, #0a1628 100%);">
+    <div class="max-w-3xl mx-auto text-center space-y-8">
+
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-teal/30 bg-brand-teal/10">
+        <span class="text-xs font-semibold text-brand-teal tracking-widest uppercase">Free with every subscription</span>
+      </div>
+
+      <h1 class="font-serif text-5xl lg:text-6xl text-white leading-tight">
+        The Caregiver's<br />
+        <em class="not-italic text-brand-teal">Doctor Visit Playbook</em>
+      </h1>
+
+      <p class="text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
+        50 scripts for talking to any doctor, at any stage of dementia caregiving.
+        Know exactly what to say. Say it clearly. Get heard every time.
+      </p>
+
+      <!-- Form -->
+      <div class="flex flex-col items-center gap-3">
+        <SubscribeForm dark={true} id="scripts-hero-form" />
+        <p class="text-xs text-slate-500">Subscribe free — get the playbook instantly in your welcome email.</p>
+      </div>
+
+      <!-- Download note -->
+      <div class="flex items-center justify-center gap-3 pt-2">
+        <a
+          href="/downloads/playbook.pdf"
+          download="caregiver-doctor-visit-playbook.pdf"
+          class="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-brand-teal transition-colors"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          Already subscribed? Download the PDF directly →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- What's Inside -->
+  <section class="py-20 px-6 bg-brand-warm">
+    <div class="max-w-4xl mx-auto space-y-14">
+
+      <div class="text-center space-y-4">
+        <h2 class="font-serif text-4xl text-brand-text">What's inside</h2>
+        <p class="text-brand-muted max-w-xl mx-auto">
+          50 scripts across 7 sections — from preparing for the appointment to advocating for yourself as a caregiver.
+          Three samples below.
+        </p>
+      </div>
+
+      <!-- Section overview -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {[
+          { num: "8", label: "Before the Appointment" },
+          { num: "10", label: "During the Appointment — Getting Heard" },
+          { num: "10", label: "Asking the Right Questions" },
+          { num: "8",  label: "Behavioral Challenges — Reporting to the Doctor" },
+          { num: "6",  label: "Safety Conversations" },
+          { num: "5",  label: "Care Transitions" },
+          { num: "3",  label: "Advocating for Yourself as the Caregiver" },
+        ].map(section => (
+          <div class="neu-pressed px-4 py-3 flex items-center justify-between gap-4">
+            <span class="text-sm text-brand-muted">{section.label}</span>
+            <span class="text-xs font-semibold text-brand-teal shrink-0">{section.num} scripts</span>
+          </div>
+        ))}
+      </div>
+
+      <!-- Sample scripts -->
+      <div class="space-y-6">
+        <h3 class="font-serif text-2xl text-brand-text text-center">Three scripts from the playbook</h3>
+
+        <!-- Script 9 -->
+        <div class="neu-raised p-6 space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-brand-teal tracking-widest uppercase">Script 9 · During the Appointment</span>
+          </div>
+          <h4 class="font-serif text-lg text-brand-text leading-snug">
+            When your loved one says "I'm fine" and contradicts everything you say
+          </h4>
+          <p class="text-sm text-brand-muted italic">
+            In the exam room when your loved one is minimizing or actively contradicting your reports — and the doctor might take their word for it.
+          </p>
+          <div class="space-y-1">
+            <p class="text-xs font-semibold text-brand-teal tracking-wider uppercase">Say this:</p>
+            <div class="neu-pressed px-4 py-3">
+              <p class="text-sm text-brand-text italic leading-relaxed">
+                "Doctor, I want to flag something for you. [Name] tends to present much better in a clinical setting than at home — that's actually common with dementia, I've read it's sometimes called the 'showtime effect.' What I'm describing about daily functioning at home is different from what you're seeing right now. May I share a few specifics?"
+              </p>
+            </div>
+          </div>
+          <p class="text-xs text-brand-muted bg-amber-50 border-l-2 border-amber-400 px-3 py-2 leading-relaxed">
+            <strong>Tip:</strong> Don't get into an argument with your loved one in the exam room. Address the doctor directly, calmly, and with specifics. Bring your written notes — dated observations carry more weight than a verbal debate.
+          </p>
+        </div>
+
+        <!-- Script 6 -->
+        <div class="neu-raised p-6 space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-brand-teal tracking-widest uppercase">Script 6 · Before the Appointment</span>
+          </div>
+          <h4 class="font-serif text-lg text-brand-text leading-snug">
+            How to request a private moment with the doctor before the patient enters
+          </h4>
+          <p class="text-sm text-brand-muted italic">
+            When you arrive and need to share something the doctor needs to hear before your loved one is in the room.
+          </p>
+          <div class="space-y-1">
+            <p class="text-xs font-semibold text-brand-teal tracking-wider uppercase">Say this:</p>
+            <div class="neu-pressed px-4 py-3">
+              <p class="text-sm text-brand-text italic leading-relaxed">
+                "Before [Name] comes in, I'd like to ask for two minutes with the doctor privately. I have some observations that I can't share in front of [Name] — they involve behaviors that would upset or embarrass them. Is there any way to arrange that, even briefly?"
+              </p>
+            </div>
+          </div>
+          <p class="text-xs text-brand-muted bg-amber-50 border-l-2 border-amber-400 px-3 py-2 leading-relaxed">
+            <strong>Tip:</strong> If a pre-visit private moment isn't possible, ask the nurse when they take vitals — they often relay information to the physician before the exam begins.
+          </p>
+        </div>
+
+        <!-- Script 43 -->
+        <div class="neu-raised p-6 space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-brand-teal tracking-widest uppercase">Script 43 · Care Transitions</span>
+          </div>
+          <h4 class="font-serif text-lg text-brand-text leading-snug">
+            How to ask the doctor when it's time for memory care
+          </h4>
+          <p class="text-sm text-brand-muted italic">
+            When you're starting to wonder whether home care is still working — and you need the doctor's honest assessment, not reassurance.
+          </p>
+          <div class="space-y-1">
+            <p class="text-xs font-semibold text-brand-teal tracking-wider uppercase">Say this:</p>
+            <div class="neu-pressed px-4 py-3">
+              <p class="text-sm text-brand-text italic leading-relaxed">
+                "I need to ask you something directly — I need your honest medical opinion, not reassurance. Based on where [Name] is right now, do you believe we are approaching the point where home care is no longer safe or sustainable? I'm not asking you to make the decision for me. I'm asking whether the medical picture supports what I've been observing at home — that we may be getting close to a transition."
+              </p>
+            </div>
+          </div>
+          <p class="text-xs text-brand-muted bg-amber-50 border-l-2 border-amber-400 px-3 py-2 leading-relaxed">
+            <strong>Tip:</strong> Most doctors will avoid volunteering this opinion without being directly asked. You have to ask directly and signal that you want honesty, not comfort. This script gives them explicit permission to tell you the truth.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Blur teaser -->
+      <div class="relative">
+        <div class="space-y-4 opacity-30 pointer-events-none select-none blur-sm">
+          <div class="neu-raised p-6 space-y-3">
+            <span class="text-xs font-semibold text-brand-teal tracking-widest uppercase">Script 13 · During the Appointment</span>
+            <h4 class="font-serif text-lg text-brand-text">How to report aggression or violent behavior</h4>
+            <div class="neu-pressed px-4 py-3">
+              <p class="text-sm text-brand-text italic">I need to talk about physical aggression. [Name] has become physically aggressive in the last [timeframe]...</p>
+            </div>
+          </div>
+          <div class="neu-raised p-6 space-y-3">
+            <span class="text-xs font-semibold text-brand-teal tracking-widest uppercase">Script 21 · Asking the Right Questions</span>
+            <h4 class="font-serif text-lg text-brand-text">When should I call you vs. go to the ER?</h4>
+            <div class="neu-pressed px-4 py-3">
+              <p class="text-sm text-brand-text italic">I need a clear line from you — what are the specific signs that mean I call the office, and what...</p>
+            </div>
+          </div>
+        </div>
+        <!-- Overlay -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-t from-brand-warm via-brand-warm/80 to-transparent">
+          <div class="text-center space-y-4 px-6">
+            <p class="font-serif text-2xl text-brand-text">47 more scripts inside.</p>
+            <p class="text-sm text-brand-muted">Subscribe free — get the full playbook instantly.</p>
+            <SubscribeForm id="scripts-inline-form" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="py-20 px-6" style="background: linear-gradient(135deg, #0a1628 0%, #0d1f3c 60%, #0a1628 100%);">
+    <div class="max-w-2xl mx-auto text-center space-y-8">
+      <h2 class="font-serif text-4xl text-white leading-tight">
+        Take it to your next appointment.
+      </h2>
+      <p class="text-slate-300 leading-relaxed">
+        Subscribe to The Caregiver Brief and get The Doctor Visit Playbook free —
+        50 scripts, print-ready, organized by situation. Plus 90 seconds of daily
+        guidance every morning at 6:00 AM.
+      </p>
+      <SubscribeForm dark={true} id="scripts-bottom-form" />
+      <p class="text-xs text-slate-500">Free forever · No spam · Unsubscribe anytime</p>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
