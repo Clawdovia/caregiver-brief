@@ -1,0 +1,33 @@
+---
+const stats = [
+  {
+    value: '12M+',
+    label: 'Americans provide unpaid dementia care',
+    icon: '🤝',
+  },
+  {
+    value: '7 Days',
+    label: 'Medical · Care · Behavior · Emotional · System · Safety · Community',
+    icon: '📅',
+  },
+  {
+    value: '90 Sec',
+    label: 'Every issue fits in your morning routine',
+    icon: '⏱️',
+  },
+];
+---
+
+<section class="bg-brand-warm py-12 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      {stats.map((stat) => (
+        <div class="neu-sm p-6 text-center space-y-2">
+          <div class="text-3xl">{stat.icon}</div>
+          <div class="font-serif text-3xl text-brand-teal">{stat.value}</div>
+          <p class="text-xs text-brand-muted leading-relaxed">{stat.label}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

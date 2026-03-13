@@ -1,0 +1,45 @@
+---
+const benefits = [
+  {
+    icon: '🧠',
+    title: 'Practical Guidance',
+    body: 'Real answers to real caregiving challenges. What to do when they refuse to bathe. How to handle sundowning. What the doctor\'s visit actually means. No jargon. No rabbit holes.',
+  },
+  {
+    icon: '💙',
+    title: 'Emotional Steadiness',
+    body: 'You\'re not failing. You\'re navigating one of the hardest things a human being can do. Every issue acknowledges that — and helps you move through it, not just survive it.',
+  },
+  {
+    icon: '✅',
+    title: 'Clear Next Steps',
+    body: 'Every brief ends with one concrete thing you can do today. Not a list of 47 things. One thing. Because when you\'re a caregiver, one thing is what gets done.',
+  },
+];
+---
+
+<section class="bg-brand-warm py-24 px-6">
+  <div class="max-w-5xl mx-auto space-y-14">
+
+    <div class="text-center space-y-4 max-w-2xl mx-auto">
+      <h2 class="font-serif text-4xl lg:text-5xl text-brand-text">
+        You need support that actually helps.
+      </h2>
+      <p class="text-lg text-brand-muted leading-relaxed">
+        Not another resource list. Not a Facebook rabbit hole at 2am.
+        A daily brief that moves you forward.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {benefits.map((b) => (
+        <div class="neu-raised p-8 space-y-4 hover:translate-y-[-2px] transition-transform duration-300">
+          <div class="text-4xl">{b.icon}</div>
+          <h3 class="font-serif text-xl text-brand-text">{b.title}</h3>
+          <p class="text-sm text-brand-muted leading-relaxed">{b.body}</p>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

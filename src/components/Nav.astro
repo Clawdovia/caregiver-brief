@@ -1,0 +1,52 @@
+---
+---
+
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="/" class="flex flex-col leading-tight group">
+      <span class="font-serif text-xl text-brand-text group-hover:text-brand-teal transition-colors">
+        The Caregiver Brief
+      </span>
+      <span class="text-xs text-brand-muted tracking-wide hidden sm:block">
+        Daily clarity for dementia caregivers
+      </span>
+    </a>
+
+    <!-- Desktop CTA -->
+    <a
+      href="#subscribe"
+      class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-brand-teal text-white text-sm font-medium rounded-full hover:bg-opacity-90 transition-all duration-200 shadow-teal-glow hover:shadow-lg"
+    >
+      Subscribe Free
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      </svg>
+    </a>
+
+    <!-- Mobile Subscribe -->
+    <a
+      href="#subscribe"
+      class="sm:hidden inline-flex items-center px-4 py-2 bg-brand-teal text-white text-sm font-medium rounded-full"
+    >
+      Subscribe
+    </a>
+  </div>
+</nav>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  let scrolled = false;
+
+  window.addEventListener('scroll', () => {
+    const isScrolled = window.scrollY > 20;
+    if (isScrolled !== scrolled) {
+      scrolled = isScrolled;
+      if (scrolled) {
+        navbar?.classList.add('bg-brand-warm', 'shadow-neu-sm', 'border-b', 'border-brand-warm-dark/20');
+      } else {
+        navbar?.classList.remove('bg-brand-warm', 'shadow-neu-sm', 'border-b', 'border-brand-warm-dark/20');
+      }
+    }
+  });
+</script>

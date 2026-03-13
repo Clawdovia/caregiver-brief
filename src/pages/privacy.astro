@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<Layout
+  title="Privacy Policy — The Caregiver Brief"
+  description="How The Caregiver Brief collects, uses, and protects your information."
+  canonical="https://www.caregiverbrief.com/privacy"
+>
+  <Nav />
+  <main class="bg-brand-warm min-h-screen pt-28 pb-20 px-6">
+    <div class="max-w-2xl mx-auto">
+      <div class="neu-raised p-10 space-y-8">
+        <div class="space-y-2">
+          <h1 class="font-serif text-4xl text-brand-text">Privacy Policy</h1>
+          <p class="text-sm text-brand-muted">Last updated: March 2026</p>
+        </div>
+
+        <div class="space-y-6 text-sm text-brand-muted leading-relaxed">
+          <div class="space-y-2">
+            <h2 class="font-serif text-xl text-brand-text">What We Collect</h2>
+            <p>When you subscribe to The Caregiver Brief, we collect your email address. That's it. We don't ask for your name, phone number, or any other personal information unless you voluntarily provide it by replying to an email.</p>
+          </div>
+
+          <div class="space-y-2">
+            <h2 class="font-serif text-xl text-brand-text">How We Use It</h2>
+            <p>Your email is used solely to send you The Caregiver Brief. We use Beehiiv as our email delivery platform. Your subscription data is stored and managed by Beehiiv in accordance with their privacy policy.</p>
+          </div>
+
+          <div class="space-y-2">
+            <h2 class="font-serif text-xl text-brand-text">We Never Sell Your Data</h2>
+            <p>Your email address is never sold, rented, or shared with third parties for marketing purposes. Period.</p>
+          </div>
+
+          <div class="space-y-2">
+            <h2 class="font-serif text-xl text-brand-text">Unsubscribing</h2>
+            <p>Every email we send includes an unsubscribe link at the bottom. Click it and you're done — no forms, no dark patterns, no waiting period. You can also email us at hello@caregiverbrief.com and we'll remove you manually within 24 hours.</p>
+          </div>
+
+          <div class="space-y-2">
+            <h2 class="font-serif text-xl text-brand-text">Analytics</h2>
+            <p>We track basic email metrics (open rates, click rates) to understand what's helpful to our readers. This data is anonymous and aggregated.</p>
+          </div>
+
+          <div class="space-y-2">
+            <h2 class="font-serif text-xl text-brand-text">Contact</h2>
+            <p>Questions? Email us at <a href="mailto:hello@caregiverbrief.com" class="text-brand-teal hover:underline">hello@caregiverbrief.com</a>.</p>
+          </div>
+        </div>
+
+        <div class="pt-4">
+          <a href="/" class="inline-flex items-center gap-2 text-sm text-brand-teal hover:underline">
+            ← Back to The Caregiver Brief
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>

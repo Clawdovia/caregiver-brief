@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<Layout
+  title="Archive — The Caregiver Brief"
+  description="Every issue of The Caregiver Brief, archived and searchable."
+  canonical="https://www.caregiverbrief.com/archive"
+>
+  <Nav />
+  <main class="bg-brand-warm min-h-screen pt-28 pb-20 px-6">
+    <div class="max-w-2xl mx-auto text-center space-y-10">
+      <div class="space-y-4">
+        <h1 class="font-serif text-5xl text-brand-text">The Archive</h1>
+        <p class="text-lg text-brand-muted leading-relaxed max-w-lg mx-auto">
+          Every issue of The Caregiver Brief, saved and searchable.
+          90 seconds of clarity, every morning — starting Monday, March 16, 2026.
+        </p>
+      </div>
+
+      <div class="neu-raised p-10 space-y-6 text-center">
+        <div class="text-4xl">📬</div>
+        <h2 class="font-serif text-2xl text-brand-text">Archive launching March 16</h2>
+        <p class="text-sm text-brand-muted leading-relaxed">
+          The full searchable archive is coming. Every issue will be published here
+          the morning it sends. Subscribe to read them in your inbox first.
+        </p>
+        <a
+          href="/#subscribe"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-brand-teal text-white text-sm font-medium rounded-full hover:opacity-90 transition-opacity shadow-teal-glow"
+        >
+          Subscribe Free →
+        </a>
+      </div>
+
+      <a href="/" class="inline-flex items-center gap-2 text-sm text-brand-teal hover:underline">
+        ← Back to The Caregiver Brief
+      </a>
+    </div>
+  </main>
+  <Footer />
+</Layout>

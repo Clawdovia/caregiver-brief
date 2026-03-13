@@ -1,0 +1,101 @@
+---
+const pillars = [
+  {
+    day: 'Monday',
+    icon: '🩺',
+    name: 'Medical',
+    desc: 'Symptoms, medication, stages, and what to tell the doctor',
+    color: 'text-blue-600',
+  },
+  {
+    day: 'Tuesday',
+    icon: '🤲',
+    name: 'Daily Care',
+    desc: 'Bathing, feeding, routines, and communication strategies',
+    color: 'text-green-600',
+  },
+  {
+    day: 'Wednesday',
+    icon: '🌙',
+    name: 'Behavior',
+    desc: 'Aggression, wandering, sundowning, and sleep disruption',
+    color: 'text-purple-600',
+  },
+  {
+    day: 'Thursday',
+    icon: '💜',
+    name: 'Emotional',
+    desc: 'Burnout, grief, guilt, self-care, and mental health',
+    color: 'text-pink-600',
+  },
+  {
+    day: 'Friday',
+    icon: '📋',
+    name: 'System',
+    desc: 'Insurance, Medicare/Medicaid, home health, and facility placement',
+    color: 'text-orange-600',
+  },
+  {
+    day: 'Saturday',
+    icon: '🏡',
+    name: 'Safety',
+    desc: 'Falls, home modifications, driving, and emergency prep',
+    color: 'text-red-600',
+  },
+  {
+    day: 'Sunday',
+    icon: '🤝',
+    name: 'Community',
+    desc: 'Resources, support groups, caregiver stories, and tools',
+    color: 'text-teal-600',
+  },
+];
+---
+
+<section class="bg-brand-warm py-24 px-6">
+  <div class="max-w-5xl mx-auto space-y-14">
+
+    <div class="text-center space-y-4 max-w-2xl mx-auto">
+      <h2 class="font-serif text-4xl lg:text-5xl text-brand-text">
+        Seven pillars. One every morning.
+      </h2>
+      <p class="text-lg text-brand-muted leading-relaxed">
+        A complete weekly rotation covering every dimension of dementia caregiving.
+        Practical to emotional. Clinical to personal.
+      </p>
+    </div>
+
+    <!-- 4+3 grid layout -->
+    <div class="space-y-6">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-5">
+        {pillars.slice(0, 4).map((p) => (
+          <div class="neu-raised p-5 space-y-3 hover:translate-y-[-2px] transition-transform duration-300">
+            <div class="flex items-center justify-between">
+              <span class="text-2xl">{p.icon}</span>
+              <div class="neu-pressed px-2 py-1">
+                <span class="text-xs font-medium text-brand-muted">{p.day.slice(0,3)}</span>
+              </div>
+            </div>
+            <h4 class={`font-serif text-base text-brand-text`}>{p.name}</h4>
+            <p class="text-xs text-brand-muted leading-relaxed">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        {pillars.slice(4).map((p) => (
+          <div class="neu-raised p-5 space-y-3 hover:translate-y-[-2px] transition-transform duration-300">
+            <div class="flex items-center justify-between">
+              <span class="text-2xl">{p.icon}</span>
+              <div class="neu-pressed px-2 py-1">
+                <span class="text-xs font-medium text-brand-muted">{p.day.slice(0,3)}</span>
+              </div>
+            </div>
+            <h4 class="font-serif text-base text-brand-text">{p.name}</h4>
+            <p class="text-xs text-brand-muted leading-relaxed">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,50 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer style="background: #070e1f;" class="text-slate-400 py-12 px-6">
+  <div class="max-w-5xl mx-auto">
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 pb-8 border-b border-white/10">
+      <!-- Brand -->
+      <div class="space-y-2">
+        <h3 class="font-serif text-white text-lg">The Caregiver Brief</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          Daily intelligence for dementia and Alzheimer's caregivers.
+          Practical. Warm. Free.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div class="flex flex-col gap-2 sm:items-center">
+        <a href="/archive" class="text-xs hover:text-white transition-colors">Archive</a>
+        <a href="/privacy" class="text-xs hover:text-white transition-colors">Privacy Policy</a>
+        <a href="https://the-caregiver-brief.beehiiv.com/subscribe" class="text-xs hover:text-white transition-colors">Unsubscribe</a>
+      </div>
+
+      <!-- Subscribe CTA -->
+      <div class="sm:text-right space-y-2">
+        <a
+          href="#subscribe"
+          class="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-teal text-white text-xs font-medium rounded-full hover:opacity-90 transition-opacity"
+        >
+          Subscribe Free →
+        </a>
+        <p class="text-xs text-slate-600">6:00 AM · Every morning</p>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="pt-6 space-y-3">
+      <p class="text-xs text-slate-600 leading-relaxed">
+        The Caregiver Brief provides general educational information for caregivers.
+        It is not medical advice. Always consult a qualified healthcare professional
+        for guidance specific to your situation.
+      </p>
+      <p class="text-xs text-slate-700">
+        © {year} The Caregiver Brief · caregiverbrief.com
+      </p>
+    </div>
+
+  </div>
+</footer>
