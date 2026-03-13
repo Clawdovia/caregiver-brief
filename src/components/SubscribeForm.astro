@@ -1,0 +1,41 @@
+---
+interface Props {
+  dark?: boolean;
+  id?: string;
+}
+const { dark = false, id = 'subscribe-form' } = Astro.props;
+---
+
+<form
+  id={id}
+  action="https://the-caregiver-brief.beehiiv.com/subscribe"
+  method="GET"
+  class={`subscribe-form flex flex-col sm:flex-row gap-3 w-full max-w-md ${dark ? 'dark-form' : ''}`}
+>
+  <input
+    type="email"
+    name="email"
+    required
+    placeholder="your@email.com"
+    autocomplete="email"
+    class={`
+      flex-1 px-4 py-3 text-sm rounded-xl outline-none transition-all duration-200
+      ${dark
+        ? 'bg-white/10 border border-white/20 text-white placeholder-white/40 focus:bg-white/15 focus:border-white/40'
+        : 'bg-brand-warm border-2 border-transparent text-brand-text placeholder-brand-muted focus:border-brand-teal shadow-neu-pressed'
+      }
+    `}
+  />
+  <button
+    type="submit"
+    class={`
+      px-6 py-3 text-sm font-medium rounded-xl whitespace-nowrap transition-all duration-200 cursor-pointer
+      ${dark
+        ? 'bg-brand-teal text-white hover:opacity-90 shadow-teal-glow hover:shadow-lg'
+        : 'bg-brand-teal text-white hover:opacity-90 shadow-teal-glow'
+      }
+    `}
+  >
+    Subscribe Free →
+  </button>
+</form>

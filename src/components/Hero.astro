@@ -1,4 +1,5 @@
 ---
+import SubscribeForm from './SubscribeForm.astro';
 ---
 
 <section class="min-h-screen bg-brand-warm flex items-center pt-24 pb-20 px-6">
@@ -25,19 +26,9 @@
           Free, every morning before the caregiving day begins.
         </p>
 
-        <!-- Beehiiv Embed -->
+        <!-- Subscribe Form -->
         <div class="space-y-3">
-          <div class="beehiiv-embed-wrapper">
-            <iframe
-              src="https://embeds.beehiiv.com/5f9413c2-1390-4248-bc78-442b76054569"
-              data-test-id="beehiiv-embed"
-              width="100%"
-              height="52"
-              frameborder="0"
-              scrolling="no"
-              style="border-radius: 10px; overflow: hidden;"
-            ></iframe>
-          </div>
+          <SubscribeForm id="hero-subscribe-form" />
           <p class="text-xs text-brand-muted">
             Free forever. No spam. Unsubscribe anytime.
           </p>
